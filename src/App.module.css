@@ -1,0 +1,109 @@
+.app {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #070b14;
+}
+
+.credit {
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.28);
+  letter-spacing: 0.6px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+
+/* view controls (top-right) */
+.viewBtns {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 21;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-end;
+}
+.viewBtn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(10, 15, 29, 0.85);
+  color: #eef2f8;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+.viewBtn:hover { border-color: rgba(212, 175, 55, 0.6); }
+.viewBtn[data-active='true'] {
+  border-color: var(--green);
+  background: rgba(8, 34, 20, 0.85);
+  box-shadow: 0 0 16px rgba(43, 255, 127, 0.25);
+}
+
+/* telemetry / avatar-location panel (TOP-LEFT) */
+.telemetry {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  z-index: 20;
+  width: 180px;
+  background: rgba(8, 12, 24, 0.86);
+  border: 1px solid rgba(43, 255, 127, 0.3);
+  border-radius: 12px;
+  padding: 10px 12px;
+  backdrop-filter: blur(8px);
+  font-family: 'Outfit', sans-serif;
+}
+.telemetryHead {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.telemetryHead small { color: #6f788c; letter-spacing: 0; text-transform: none; }
+.telemetryGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 10px;
+  font-size: 12px;
+}
+.telemetryGrid span { color: #8e97ab; }
+.telemetryGrid b { color: #eef2f8; text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 720px) {
+  .telemetry { width: 140px; top: 14px; font-size: 11px; }
+}
+
+/* Mataf audio button (bottom-left, above view buttons) */
+.audioBtn {
+  position: absolute;
+  bottom: 56px;
+  left: 14px;
+  z-index: 21;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(10, 15, 29, 0.85);
+  color: #eef2f8;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+.audioBtn:hover { border-color: rgba(212, 175, 55, 0.6); }
+.audioBtn[data-on='true'] {
+  border-color: var(--gold);
+  background: rgba(48, 36, 10, 0.85);
+}

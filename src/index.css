@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Outfit:wght@400;600;700&display=swap');
+
+:root {
+  --gold: #e8c54a;
+  --gold-deep: #c9a227;
+  --green: #2bff7f;
+  --night: #070b14;
+  --panel: #0a0f1d;
+  --font-display: 'Amiri', 'Traditional Arabic', serif;
+  --font-body: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--night);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.3); border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }

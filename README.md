@@ -18,12 +18,12 @@ The **trainee (the real human)** is the brain. Every action  start, stop, Salam,
 
 ### Tawaf
 - **▶ Start Tawaf**  must be pressed in line with Hajar al-Aswad (the green light). Pressed elsewhere → mistake logged (but not blocked).
-- **✋💋 Istilam** —the trainee pays Salam each round; only valid at the Black Stone line. There is no automatic Salam.
+- **✋ Istilam** the trainee pays Salam each round; only valid at the Black Stone line. There is no automatic Salam.
 - **🚶 Walk / ⏸ Stop** the avatar moves **non-stop** while walking and only halts when the trainee presses Stop.
 - **🏁 End Tawaf**  correct only after 7 rounds. Pressed early → "rounds not complete" mistake. If the trainee lets the avatar run a full **8th round**, that is logged as a mistake (the system stays silent *during* the 7th→8th in case the trainee is about to stop/exit, exactly as advised).
 
 ### Sa'i (longer, doubled track)
-- The corridor is long with **two lanes** — a GO lane (Safa→Marwah) and a RETURN lane (Marwah→Safa).
+- The corridor is long with **two lanes**  a GO lane (Safa→Marwah) and a RETURN lane (Marwah→Safa).
 - **Safa** (green-domed hill) and **Marwah** (terracotta-arched hill) look clearly different so the trainee can tell them apart.
 - **▶ Start Sa‘i** valid **only on Safa**. Pressed on Marwah → "you cannot start from here, Sa‘i begins at Safa" mistake.
 - **🚶 Walk / ⏸ Stop** avatar moves non-stop until stopped.
@@ -69,5 +69,5 @@ npm run dev      # http://localhost:5173
 
 
 - **Missed-Salam error (E-SALAM):** if the trainee walks a full round without pressing Istilam, the system now detects it the moment the round completes and logs a counted mistake.
-- **🎥 Cinematic follow-camera:** toggle (top-right) makes the camera smoothly track the trainee avatar — around the Kaaba in Tawaf, and along the corridor following the avatar to Safa and to Marwah in Sa'i. Turn it OFF to return to free orbit/zoom.
+- **🎥 Cinematic follow-camera:** toggle (top-right) makes the camera smoothly track the trainee avatar around the Kaaba in Tawaf, and along the corridor following the avatar to Safa and to Marwah in Sa'i. Turn it OFF to return to free orbit/zoom.
 - **📍 Avatar Location panel (live):** a telemetry readout (bottom-right) showing the avatar's exact x/z, angle or track-progress, region (Safa/Marwah/track), direction, rounds/laps, speed, state and error count. The same data is also published to `window.__umrahState` every frame — a ready-made feature vector for the planned Machine Learning / Deep Learning component.
